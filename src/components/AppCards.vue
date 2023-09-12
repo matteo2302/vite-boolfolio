@@ -1,6 +1,6 @@
 <script >
 export default {
-  name: 'AppCard',
+  name: 'AppCards',
   props: { projects: Array }
 }
 </script>
