@@ -1,12 +1,13 @@
-import { createRouter } from "vue-router";
-import HomePage from "../pages/HomePage.vue";
+import { createRouter, createWebHashHistory } from "vue-router";
+import Homepage from "../pages/Homepage.vue";
 
 const router = createRouter({
-  AppCardsroutes: [
+  history: createWebHashHistory(),
+  routes: [
     {
       path: "/",
       name: "home",
-      component: HomePage,
+      component: Homepage,
     },
   ],
 });
