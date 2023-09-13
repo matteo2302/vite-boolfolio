@@ -1,6 +1,6 @@
 <script >
 import axios from 'axios';
-const endpoint = 'https://localhost:8000/api/projects/';
+const endpoint = 'https://localhost:8000/api/projects/{id}';
 export default {
   name: 'DetailPage',
 
@@ -18,6 +18,8 @@ export default {
 
 </script>
 
-<template></template>
+<template>
+  <h1>hello</h1>
+</template>
 
 <style ></style>
