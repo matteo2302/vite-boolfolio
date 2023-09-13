@@ -1,17 +1,17 @@
 <script >
 import axios from 'axios';
-const endpoint = 'https://localhost:8000/api/projects/{id}';
+const baseUri = 'https://localhost:8000/api/projects/';
 export default {
   name: 'DetailPage',
 
-  data: () => ({ projects: [] }),
+  data: () => ({ project: null }),
   methods: {
-    fetchProjects() {
-      axios.get(endpoint).then((res) => { this.projects = res.data })
+    fetchProject() {
+      axios.get(baseUri + this.$route.params.id).then(res => { this.project = res.data; })
     }
   },
   created() {
-    this.fetchProjects()
+    this.fetchProject()
   }
 
 }
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <h1>hello</h1>
+  <h1>hello {{ $route.params.id }}</h1>
 </template>
 
 <style ></style>
